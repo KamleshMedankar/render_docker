@@ -1,0 +1,23 @@
+CREATE TABLE payment (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  order_id VARCHAR(100),
+  razorpay_order_id VARCHAR(100),
+  razorpay_payment_id VARCHAR(100),
+  razorpay_signature VARCHAR(255),
+  amount DECIMAL(10,2),
+  currency VARCHAR(10),
+  gateway VARCHAR(50),
+  customer_name VARCHAR(100),
+  customer_email VARCHAR(100),
+  customer_phone VARCHAR(20),
+  status VARCHAR(20),
+  method VARCHAR(50),
+  vpa VARCHAR(100),
+  fee DECIMAL(10,2),
+  tax DECIMAL(10,2),
+  amount_paid DECIMAL(10,2),
+  amount_refunded DECIMAL(10,2),
+  notes JSON,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
